@@ -2,10 +2,7 @@ package ua.i.mail100.sfgdi.controllers;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ua.i.mail100.sfgdi.services.GreetingService;
-import ua.i.mail100.sfgdi.services.GreetingServiceImpl;
-
-import static org.junit.jupiter.api.Assertions.*;
+import ua.i.mail100.sfgdi.services.PropertyInjectionGreetingService;
 
 class PropertyInjectedControllerTest {
 
@@ -14,7 +11,7 @@ class PropertyInjectedControllerTest {
     @BeforeEach
     void setUp(){
         controller = new PropertyInjectedController();
-        controller.greetingService = new GreetingServiceImpl();
+        controller.greetingService = new PropertyInjectionGreetingService();
     }
 
     @Test
